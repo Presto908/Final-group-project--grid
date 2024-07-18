@@ -1,0 +1,159 @@
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+  }
+  
+  body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+  }
+  
+  .btn {
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+  
+  .wrapper {
+    /* difine the grid here */
+  
+    /* ================ */
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "showcase showcase showcase top-box-a"
+    "showcase showcase showcase top-box-b"
+    "boxes boxes boxes boxes"
+    "footer footer footer footer";
+    gap: 24px;
+    /* ================ */
+  }
+  
+  /* Navigation */
+  .main-nav {
+    /* difien grid-area */
+  
+    /* ================ */
+    grid-column: span 4;
+    grid-area: header;
+    /* ================ */
+  }
+  
+  .main-nav ul {
+    /* define display as grid and gap */
+    /* difine grid columns */
+    padding: 0;
+    list-style: none;
+  
+    /* ================ */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    /* ================ */
+  }
+  
+  .main-nav a {
+    background: #ddd;
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: 10px 10px 8px grey;
+  }
+  
+  .main-nav a:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Showcase */
+  .showcase {
+    /*define grid-area */
+    min-height: 400px;
+    background: url(showcase.jpg);
+    background-size: cover;
+    padding: 3rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  
+    /* ================ */
+    grid-column: span 3;
+    grid-row: span 2;
+    /* ================ */
+  }
+  
+  .showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: #fff;
+  }
+  
+  .showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: #fff;
+  }
+  
+  .top-box-a {
+    /* define grid-area */
+    grid-area: top-box-a;
+  }
+  
+  .top-box-b {
+    grid-area: top-box-b;
+  }
+  
+  /* Top Box */
+  .top-box {
+    background: #ddd;
+    display: grid;
+    /* define display as grid */
+    /* define items justifications and alignments*/
+    padding: 1.5rem;
+    box-shadow: 10px 10px 8px grey;
+  }
+  
+  .top-box .price {
+    font-size: 2.5rem;
+  }
+  
+  /* Boxes */
+  .boxes {
+    /* define display as grid */
+    grid-area: boxes;
+  
+      /* ================ */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
+      /* ================ */
+  }
+  
+  .box {
+    background: #ddd;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 10px 10px 8px grey;
+  }
+  
+  footer {
+    grid-area: footer;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    font-size: x-large;
+    padding: 1%;
+  }
+  @media (max-width:780px) {
+    .wrapper{
+      grid-template-areas: 
+     'top-box'
+    'top-box-a'
+    'top-box-b';
+    }
+  }
