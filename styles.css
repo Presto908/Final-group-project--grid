@@ -26,7 +26,7 @@ html {
     "header header header header"
     "showcase showcase showcase top-box-a"
     "showcase showcase showcase top-box-b"
-    "boxes boxes boxes boxes"
+    /* "boxes boxes boxes boxes" we can add this if we choose to have another row before the footer */
     "footer footer footer footer";
     gap: 24px;
     /* ================ */
@@ -76,7 +76,7 @@ html {
   .showcase {
     /*define grid-area */
     min-height: 400px;
-    background: url(showcase.jpg);
+    background: url(imgs/rings\ in\ boxes.jpg)     ;
     background-size: cover;
     padding: 3rem;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
@@ -90,13 +90,13 @@ html {
   .showcase h1 {
     font-size: 4rem;
     margin-bottom: 0;
-    color: #fff;
+    color: #0f0e0e;
   }
   
   .showcase p {
     font-size: 1.3rem;
     margin-top: 0;
-    color: #fff;
+    color: #1b0303;
   }
   
   .top-box-a {
@@ -152,8 +152,8 @@ html {
   @media (max-width:780px) {
     .wrapper{
       grid-template-areas: 
-     'top-box'
-    'top-box-a'
-    'top-box-b';
+     
+    'showcase'
+    'showcase';
     }
   }
