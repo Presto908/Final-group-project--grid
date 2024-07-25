@@ -1,184 +1,160 @@
-html {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background-color: black;
-    color: white;
-  }
-  
-  body {
-    background: black;
-    margin: 30px 50px;
-    line-height: 1.4;
-  }
-  
-  .btn {
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-  }
-  
-  .wrapper {
-    /* difine the grid here */
-  
-    /* ================ */
-    display: grid;
-    grid-template-areas:
-    "header header header header"
-    "showcase showcase showcase top-box-a"
-    "showcase showcase showcase top-box-b"
-    /* "boxes boxes boxes boxes" we can add this if we choose to have another row before the footer */
-    "footer footer footer footer";
-    gap: 24px;
-    /* ================ */
-  }
-  
-  /* Navigation */
-  .main-nav {
-    /* difien grid-area */
-  
-    /* ================ */
-    grid-column: span 4;
-    grid-area: header;
-    /* ================ */
-  }
-  
-  .main-nav ul {
-    /* define display as grid and gap */
-    /* difine grid columns */
-    padding: 0;
-    list-style: none;
-  
-    /* ================ */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    /* ================ */
-  }
-  
-  .main-nav a {
-    background: #ddd;
-    display: block;
-    text-decoration: none;
-    padding: 0.8rem;
-    text-align: center;
-    color: #333;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    box-shadow: 10px 10px 8px grey;
-  }
-  
-  .main-nav a:hover {
-    background: #333;
-    color: #fff;
-  }
-  
-  /* Showcase */
-  .showcase {
-    /*define grid-area */
-    min-height: 400px;
-    background: url(imgs/rings\ in\ boxes.jpg)     ;
-    background-size: cover;
-    padding: 3rem;
-    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  
-    /* ================ */
-    grid-column: span 3;
-    grid-row: span 2;
-    /* ================ */
-  }
-  
-  .showcase h1 {
-    font-size: 4rem;
-    margin-bottom: 0;
-    color: #0f0e0e;
-  }
-  
-  .showcase p {
-    font-size: 1.3rem;
-    margin-top: 0;
-    color: #1b0303;
-  }
-  
-  .top-box-a {
-    /* define grid-area */
-    grid-area: top-box-a;
-  }
-  
-  .top-box-b {
-    grid-area: top-box-b;
-  }
-  
-  /* Top Box */
-  .top-box {
-    background: #ddd;
-    display: grid;
-    /* define display as grid */
-    /* define items justifications and alignments*/
-    padding: 1.5rem;
-    box-shadow: 10px 10px 8px grey;
-  }
-  
-  .top-box .price {
-    font-size: 2.5rem;
-  }
-  
-  /* Boxes */
-  .boxes {
-    /* define display as grid */
-    grid-area: boxes;
-  
-      /* ================ */
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 10px;
-      /* ================ */
-  }
-  
-  .box {
-    background: #ddd;
-    text-align: center;
-    padding: 1.5rem 2rem;
-    box-shadow: 10px 10px 8px grey;
-  }
-  
-  footer {
-    grid-area: footer;
-    background: #333;
-    color: #fff;
-    text-align: center;
-    font-size: x-large;
-    padding: 1%;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-    .media .image img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-    .featured { 
-    display:block;
-    grid-area: top-box-a;
-    padding-left: 50;
-   
-    max-width: 200px;
-    height: 50px;}
-  }
-  img{object-position: center;
-       width: 100%;
-      max-height:200px;
-      margin-left: 0px;
-      margin-right: 0px;
-      padding: 0%;
-    background-color: black;}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
-  @media (max-width:780px) {
-    .wrapper{
-      grid-template-areas: 
-     
-    'showcase'
-    'showcase';
-    }
-  }
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f0a500;
+}
+
+.hero {
+  background: url('hero.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.hero p {
+  font-size: 1.2em;
+  text-shadow: 2px 2px 4px #000;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured-products .product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  flex: 1 1 calc(33% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.product h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.product p {
+  color: #f0a500;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.about, .reviews, .newsletter {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #f0a500;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #f0a500;
+  color: #fff;
+  border: 2px solid #f0a500;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #d18e00;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .social-media a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+  color: #f0a500;
+}
+
