@@ -1,61 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sulani-home</title>
+    <title>Sulani Store - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Navigation -->
-        <nav class="main-nav">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="gallery.html">Gallery</a>
-            </li>
-            <li>
-              <a href="orders.html">Orders</a>
-            </li>
-          </ul>
+    <header>
+        <div class="logo">Sulani Store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="custom-orders.html">Custom Orders</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+    </header>
     
-        <!-- Top Container -->
-          <header class="showcase">
-            <!-- <h1>Your Web Presence</h1> -->
-            <p>Art and Love in One piece</p>
-            <!-- <a href="#" class="btn">Read More</a> -->
-          </header>
-          <div class="top-box top-box-a">
-            <h4>Feature of the month</h4>
-              <div class ="featured"> <img src="imgs/necklace with blue stone soaring eagle.png" alt="necklace" >
-              </div>
-                <p class="price">$199</p>
+    <section class="hero">
+        <h1>Elegance in Every Piece</h1>
+        <p>Discover our exclusive collection of Middle Eastern gold jewelry</p>
+    </section>
 
-            <a href="" class="btn">Buy Now</a>
-          </div>
-          <div class="top-box top-box-b">
-            <h4>Jewlery Worn by clebrities</h4>
-            <!-- <p class="price">$299/mo</p> -->
-            <a href="" class="btn">Buy Now</a>
-          </div>
-    
-       
-        </section>
-    
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <!-- Repeat this block for each product -->
+            <div class="product">
+                <img src="goldnecklace,whitback.jpg" alt="Product 1">
+                <h3>Gold Necklace</h3>
+                <p>$250</p>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-          <p>Sulani &copy; 2024</p>
-        </footer>
-    
-      </div>
-      <!-- Wrapper Ends -->
+    <section class="about">
+        <h2>About Sulani Store</h2>
+        <p>At Sulani Store, we bring the elegance and tradition of Middle Eastern gold jewelry to Canada. Our collection features exquisite pieces crafted with the finest materials and exceptional craftsmanship.</p>
+    </section>
+
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <p>"Beautiful jewelry and excellent service!" - A happy customer</p>
+        <!-- Add more testimonials as needed -->
+    </section>
+
+    <section class="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="contact-info">
+            <p>Contact us: info@sulanistore.com | +1-234-567-890</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
