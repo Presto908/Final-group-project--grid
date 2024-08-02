@@ -1,9 +1,13 @@
-body {
+*{box-sizing: border-box;
+align-items: center;}
+body { 
+  height:100%;
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
+ 
 }
 
 header {
@@ -15,7 +19,7 @@ header {
   color: #fff;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  /* z-index: 1000;  */
 }
 
 .logo {
@@ -160,3 +164,13 @@ footer .social-media a:hover {
   color: #f0a500;
 }
 
+form {
+  
+    /* flex: 1 ; */
+    flex-direction: column;
+    /* display: flex;  */
+    /* justify-content: center;  */
+     /* align-items: center;  */
+    padding-left: 30%; 
+    height:80vh;
+}
